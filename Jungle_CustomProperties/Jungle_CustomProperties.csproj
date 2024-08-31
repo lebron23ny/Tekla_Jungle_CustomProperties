@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D61A059-3EBA-43AF-9196-A1C9FFBF5992}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jungle_CustomProperties</RootNamespace>
+    <AssemblyName>Jungle_CustomProperties</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tekla.Structures, Version=2021.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\бибилиотеки\2021\Tekla.Structures.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures.Catalogs, Version=2021.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\бибилиотеки\2021\Tekla.Structures.Catalogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures.CustomPropertyPlugin">
+      <HintPath>..\..\..\..\..\Desktop\бибилиотеки\2021\Tekla.Structures.CustomPropertyPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures.Drawing, Version=2021.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Desktop\бибилиотеки\2021\Tekla.Structures.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures.Model, Version=2021.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\бибилиотеки\2021\Tekla.Structures.Model.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extension\MyDrawingClass.cs" />
+    <Compile Include="Extension\myEnum\enumContetnHorizontalAlligment.cs" />
+    <Compile Include="Extension\myEnum\enumMyTypeView.cs" />
+    <Compile Include="Extension\MyView.cs" />
+    <Compile Include="Extension\ToolsDrawing.cs" />
+    <Compile Include="Extension\ToolsModel.cs" />
+    <Compile Include="Jungle_CustomPropertyDrawing\DrawingTitleAllViews.cs" />
+    <Compile Include="Jungle_CustomPropertyDrawing\DrawingTitle_Row5_50symb.cs" />
+    <Compile Include="Jungle_CustomPropertyDrawing\DrawingTitle_Row4_50symb.cs" />
+    <Compile Include="Jungle_CustomPropertyDrawing\DrawingTitle_Row3_50symb.cs" />
+    <Compile Include="Jungle_CustomPropertyDrawing\DrawingTitle_Row2_50symb.cs" />
+    <Compile Include="Jungle_CustomPropertyDrawing\DrawingTitle_Row1_50symb.cs" />
+    <Compile Include="Jungle_CustomPropertyDrawing\Part_IsPerpend_in_view_plane.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\BoltCountWasher3InOneBolt.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\BoltSetWasher3.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\BoltSetWasher2.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\BoltSetWasher1.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\BoltSetNut2.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\BoltSetNut1.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsParallel_in_work_plane_YOZ.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsParallel_in_work_plane_XOZ.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsParallel_in_work_plane_XOY.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsParallel_in_work_plane_Z.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsParallel_in_work_plane_Y.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsParallel_in_work_plane_X.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsPerpend_in_work_plane_YOZ.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsPerpend_in_work_plane_XOZ.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsPerpend_in_work_plane_XOY.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsPerpend_globalYOZ.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsPerpend_globalXOZ.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsPerpend_globalXOY.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsParallel_globalYOZ.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsParallel_globalXOZ.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsParallel_globalXOY.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsParallel_globalX.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsParallel_globalY.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\Part_IsParallel_globalZ.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\ProfileKM_Symbol.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\ProfileKM.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\ProfileReducedThickness.cs" />
+    <Compile Include="Jungle_CustomPropertyModel\ProfilePerimetr.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "C:\TeklaStructures\2021.0\Environments\common\extensions\custom\properties" /R/Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>
